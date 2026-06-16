@@ -3,7 +3,7 @@
 /*****************************/
 /******** HERO HEADER ********/
 /*****************************/
-header{
+.imgheader{
     background-image:
         linear-gradient(
             to top,
@@ -25,7 +25,6 @@ header{
 
 .hero{
     padding: 280px 125px;
-    background-color: var(--cor-fundo);
 }
 
 .subtitulo{
@@ -40,7 +39,6 @@ header{
 .hero h1{
     font-size: 80px;
     font-family: var(--fonte-titulo);
-    /* margin-bottom: 24px; */
 }
 
 
@@ -144,6 +142,7 @@ header{
 footer{
     border-top: 1px solid var(--cor-borda);
     padding: 60px 125px 20px;
+    position: absolute;
 }
 
 .footer-content{
