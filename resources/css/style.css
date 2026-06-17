@@ -64,7 +64,7 @@ img{
 :root{
     /* Cores principais */
     --cor-fundo: #0A0A0A;
-    --cor-card: #131313;
+    --cor-card: #212121;
     --cor-card-hover: #1C1B1B;
 
     --cor-vermelha: #E30613;
@@ -191,6 +191,28 @@ section{
     font-family: var(--fonte-label);
     font-size: 11px;
 }
+
+
+
+
+.service-card {
+    overflow: hidden; /* Garante que o zoom da imagem não saia do card */
+}
+
+
+.imgService {
+    filter: grayscale(100%); /* Começa cinza */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transição suave */
+    
+    
+}
+
+
+.service-card:hover .imgService {
+    filter: none;
+    transform: scale(1.08); /* Dá o zoom de 8% na imagem */
+}
+
 
 
 /*****************************/
