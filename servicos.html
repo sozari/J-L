@@ -2,82 +2,235 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="vendors/css/normalize.css">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/headerFouter.css"
-
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
-    <title>J&L Mecânica Automotiva</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Serviços da J&L Mecânica Automotiva — freios, suspensão, troca de óleo e diagnóstico eletrônico." />
+  <link rel="stylesheet" href="vendors/css/normalize.css" />
+  <link rel="stylesheet" href="css/headerFouter.css" />
+  <link rel="stylesheet" href="css/servicos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet" />
+  <title>Serviços — J&L Mecânica Automotiva</titlegit add servicos.html css/servicos.css>
 </head>
 
-<header></header>
+<body class="pg-servicos">
 
-    <!-- NAVBAR -->
-    <nav class="main-nav">
-        <div>
-            <h1>J&L</h1>
-        </div>
+  <!-- NAV -->
+  <nav class="main-nav">
+    <div>
+      <h1>J&L</h1>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servicos.html" class="nav-ativo">Serviços</a></li>
+      <li><a href="index.html#about">Sobre Nós</a></li>
+      <li><a href="index.html#contact">Contato</a></li>
+    </ul>
+    <div>
+      <a href="index.html#contact" class="btn">Whatsapp</a>
+    </div>
+  </nav>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#about">Sobre Nós</a></li>
-            <li><a href="#contact">Contato</a></li>
+  <!-- HERO -->
+  <header class="svc-hero">
+    <div class="svc-hero-inner">
+      <p class="svc-eyebrow">ESPECIALIDADES</p>
+      <h1>Nossos <span>Serviços</span></h1>
+      <p class="svc-hero-desc">
+        Trabalhamos com equipamentos modernos, peças de qualidade e mecânicos
+        certificados. Cada serviço é executado com precisão e transparência.
+      </p>
+    </div>
+  </header>
+
+  <!-- SERVIÇOS -->
+  <main class="svc-main">
+
+    <!-- FREIOS -->
+    <article class="svc-card" id="freios">
+      <figure class="svc-img-wrap">
+        <img src="css/img/brakes.png" alt="Sistema de freios — disco ventilado com pinça esportiva" width="800"
+          height="800" loading="lazy" />
+      </figure>
+      <div class="svc-conteudo">
+        <span class="svc-tag">SAFETY &amp; PERFORMANCE</span>
+        <h2>Freios</h2>
+        <p class="svc-intro">
+          O sistema de freios é o componente de segurança mais importante do seu
+          veículo. Na J&amp;L, realizamos inspeção e manutenção completa com
+          peças originais ou de primeira linha.
+        </p>
+        <h3 class="svc-lista-titulo">Como realizamos o serviço:</h3>
+        <ol class="svc-lista-ord">
+          <li>Inspeção visual das pastilhas, discos e tambores</li>
+          <li>Medição da espessura e nível de desgaste das pastilhas</li>
+          <li>Verificação do fluido de freio (nível e qualidade)</li>
+          <li>Teste de pressão do sistema hidráulico</li>
+          <li>Substituição de peças desgastadas com garantia</li>
+          <li>Teste em rodagem após execução do serviço</li>
+        </ol>
+        <h3 class="svc-lista-titulo">O que está incluso:</h3>
+        <ul class="svc-lista-nao-ord">
+          <li>Pastilhas dianteiras e traseiras</li>
+          <li>Discos e tambores</li>
+          <li>Pinças e cilindros de roda</li>
+          <li>Fluido de freio DOT 3 / DOT 4</li>
+          <li>Cabo de freio de mão</li>
         </ul>
+        <a href="index.html#contact" class="svc-btn">Agendar avaliação</a>
+      </div>
+    </article>
 
-        <div>
-            <a href="#" class="btn">Whatsapp</a>
-        </div>
-    </nav>
+    <!-- SUSPENSÃO -->
+    <article class="svc-card svc-card--invertido" id="suspensao">
+      <figure class="svc-img-wrap">
+        <img src="css/img/suspension.png" alt="Amortecedor e mola de suspensão sendo instalados" width="800"
+          height="800" loading="lazy" />
+      </figure>
+      <div class="svc-conteudo">
+        <span class="svc-tag">STABILITY &amp; CONTROL</span>
+        <h2>Suspensão</h2>
+        <p class="svc-intro">
+          A suspensão afeta diretamente a dirigibilidade, o conforto e a
+          segurança. Diagnosticamos e corrigimos qualquer problema para que seu
+          veículo responda com precisão em qualquer situação.
+        </p>
+        <h3 class="svc-lista-titulo">Como realizamos o serviço:</h3>
+        <ol class="svc-lista-ord">
+          <li>Diagnóstico visual e auditivo em elevação</li>
+          <li>Verificação de amortecedores (vazamento e eficiência)</li>
+          <li>Inspeção de buchas, bandejas e pivôs</li>
+          <li>Análise do desgaste irregular dos pneus</li>
+          <li>Substituição dos componentes danificados</li>
+          <li>Alinhamento e balanceamento pós-manutenção</li>
+        </ol>
+        <h3 class="svc-lista-titulo">O que está incluso:</h3>
+        <ul class="svc-lista-nao-ord">
+          <li>Amortecedores dianteiros e traseiros</li>
+          <li>Molas e batentes de suspensão</li>
+          <li>Buchas de bandeja e estabilizador</li>
+          <li>Pivôs e terminais de direção</li>
+          <li>Alinhamento geométrico</li>
+        </ul>
+        <a href="index.html#contact" class="svc-btn">Agendar avaliação</a>
+      </div>
+    </article>
 
-<body>
-    <h1> vamooo</h1>
-<hr><br><br><br><br><br><br><br><br><hr>
-</body>
+    <!-- TROCA DE ÓLEO -->
+    <article class="svc-card" id="oleo">
+      <figure class="svc-img-wrap">
+        <img src="css/img/mecanic.png" alt="Mecânico J&L realizando troca de óleo e filtros" width="800" height="800"
+          loading="lazy" />
+      </figure>
+      <div class="svc-conteudo">
+        <span class="svc-tag">ENGINE CARE</span>
+        <h2>Troca de Óleo</h2>
+        <p class="svc-intro">
+          A troca de óleo regular é a manutenção mais importante para prolongar
+          a vida útil do motor. Utilizamos lubrificantes de alta performance
+          selecionados conforme a especificação do fabricante.
+        </p>
+        <h3 class="svc-lista-titulo">Como realizamos o serviço:</h3>
+        <ol class="svc-lista-ord">
+          <li>Verificação do nível e condição do óleo atual</li>
+          <li>Drenagem completa do óleo usado</li>
+          <li>Substituição do filtro de óleo</li>
+          <li>Abastecimento com óleo correto para o motor</li>
+          <li>Verificação de vazamentos após o abastecimento</li>
+          <li>Registro da troca e indicação do próximo prazo</li>
+        </ol>
+        <h3 class="svc-lista-titulo">O que está incluso:</h3>
+        <ul class="svc-lista-nao-ord">
+          <li>Óleo mineral, semissintético ou sintético</li>
+          <li>Filtro de óleo original ou equivalente</li>
+          <li>Inspeção visual do motor</li>
+          <li>Verificação de outros fluidos (arrefecimento, direção)</li>
+          <li>Check-list de revisão geral</li>
+        </ul>
+        <a href="index.html#contact" class="svc-btn">Agendar avaliação</a>
+      </div>
+    </article>
 
+    <!-- DIAGNÓSTICO ELETRÔNICO -->
+    <article class="svc-card svc-card--invertido" id="diagnostico">
+      <figure class="svc-img-wrap">
+        <img src="css/img/system.png" alt="Diagnóstico eletrônico com scanner automotivo conectado ao veículo"
+          width="800" height="800" loading="lazy" />
+      </figure>
+      <div class="svc-conteudo">
+        <span class="svc-tag">SYSTEM ANALYSIS</span>
+        <h2>Diagnóstico Eletrônico</h2>
+        <p class="svc-intro">
+          Veículos modernos concentram todo o controle em módulos eletrônicos.
+          Nossa equipe usa scanner de última geração para identificar falhas
+          antes que se tornem problemas maiores.
+        </p>
+        <h3 class="svc-lista-titulo">Como realizamos o serviço:</h3>
+        <ol class="svc-lista-ord">
+          <li>Conexão do scanner na porta OBD-II do veículo</li>
+          <li>Leitura de todos os módulos (motor, câmbio, ABS, airbag)</li>
+          <li>Identificação e registro dos códigos de falha (DTCs)</li>
+          <li>Análise dos dados em tempo real (sensores e atuadores)</li>
+          <li>Relatório técnico com diagnóstico e recomendações</li>
+          <li>Execução do reparo e limpeza dos códigos após correção</li>
+        </ol>
+        <h3 class="svc-lista-titulo">O que está incluso:</h3>
+        <ul class="svc-lista-nao-ord">
+          <li>Scanner multimarcas de última geração</li>
+          <li>Leitura de todos os módulos eletrônicos</li>
+          <li>Relatório técnico impresso ou digital</li>
+          <li>Atualização de firmware quando disponível</li>
+          <li>Orientação técnica ao cliente</li>
+        </ul>
+        <a href="index.html#contact" class="svc-btn">Agendar avaliação</a>
+      </div>
+    </article>
 
+  </main>
 
-    <footer>
+  <!-- CTA -->
+  <section class="svc-cta">
+    <div class="svc-cta-inner">
+      <h2>Não encontrou o serviço que precisa?</h2>
+      <p>Entre em contato — nossa equipe avalia seu veículo e orienta o melhor caminho.</p>
+      <a href="index.html#contact" class="btnred">FALAR COM A EQUIPE</a>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
     <div class="footer-content">
-
-        <div>
-            <h3>J&L</h3>
-
-            <p>
-                Manutenção automotiva com qualidade, transparência e confiança.
-            </p>
-        </div>
-
-        <div>
-            <h4>Serviços</h4>
-
-            <ul>
-                <li>Freios</li>
-                <li>Suspensão</li>
-                <li>Diagnóstico</li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Contato</h4>
-
-            <ul>
-                <li>(51) 99999-9999</li>
-                <li>Porto Alegre - RS</li>
-            </ul>
-        </div>
-
+      <div>
+        <h3>J&L</h3>
+        <p>Manutenção automotiva com qualidade, transparência e confiança.</p>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#freios">Freios</a></li>
+          <li><a href="#suspensao">Suspensão</a></li>
+          <li><a href="#oleo">Troca de Óleo</a></li>
+          <li><a href="#diagnostico">Diagnóstico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>(51) 99999-9999</li>
+          <li>Porto Alegre — RS</li>
+          <li>contato@jlauto.com.br</li>
+        </ul>
+      </div>
     </div>
-
     <div class="footer-bottom">
-        © 2025 J&L Manutenção Automotiva
+      © 2025 J&L Manutenção Automotiva
     </div>
+  </footer>
 
-</footer>
+</body>
 
 </html>
