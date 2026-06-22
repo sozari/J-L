@@ -1,0 +1,328 @@
+/* servicos.css — Página de Serviços */
+
+/* RESET DESTA PÁGINA */
+.pg-servicos {
+  background: #111113;
+  color: #d1d5db;
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.pg-servicos main,
+.pg-servicos header,
+.pg-servicos section,
+.pg-servicos article {
+  margin: 0;
+  padding: 0;
+}
+
+/* LINK ATIVO NO NAV */
+.nav-ativo {
+  color: #e63946 !important;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 2px;
+}
+
+/* HERO */
+.svc-hero {
+  background:
+    linear-gradient(165deg, rgba(17, 17, 19, .95), rgba(30, 30, 35, .85) 50%, rgba(17, 17, 19, .98)),
+    url('img/carro.png') center / cover no-repeat;
+  padding: 7rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.svc-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.svc-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+  color: #e63946;
+  margin-bottom: .75rem;
+}
+
+.svc-hero h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.svc-hero h1 span {
+  color: #e63946;
+}
+
+.svc-hero-desc {
+  font-size: 1rem;
+  color: #9ca3af;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* MAIN */
+.svc-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* CARD DE SERVIÇO */
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.svc-card:hover {
+  border-color: rgba(230, 57, 70, .25);
+  box-shadow: 0 8px 32px rgba(230, 57, 70, .08);
+}
+
+/* IMAGEM */
+.svc-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #0f0f11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.75) saturate(.8);
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.svc-card:hover .svc-img-wrap img {
+  transform: scale(1.06);
+  filter: brightness(.85) saturate(.9);
+}
+
+/* CONTEÚDO */
+.svc-conteudo {
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.svc-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  color: #e63946;
+  background: rgba(230, 57, 70, .08);
+  border: 1px solid rgba(230, 57, 70, .2);
+  padding: .3rem .7rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.svc-conteudo h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+  letter-spacing: .02em;
+}
+
+.svc-intro {
+  font-size: .95rem;
+  color: #9ca3af;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* LISTAS */
+.svc-lista-titulo {
+  font-family: 'Sora', sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .65rem;
+  margin-top: 1.25rem;
+}
+
+/* Lista ordenada (ol) */
+.svc-lista-ord {
+  list-style: none;
+  counter-reset: passo;
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+
+.svc-lista-ord li {
+  counter-increment: passo;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: .6rem;
+  font-size: .9rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.svc-lista-ord li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: .1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(230, 57, 70, .1);
+  border: 1px solid rgba(230, 57, 70, .3);
+  border-radius: 50%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  font-weight: 500;
+  color: #e63946;
+}
+
+/* Lista não ordenada (ul) */
+.svc-lista-nao-ord {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .8rem;
+}
+
+.svc-lista-nao-ord li {
+  font-size: .85rem;
+  color: #9ca3af;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.svc-lista-nao-ord li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #e63946;
+  font-size: .7rem;
+}
+
+/* BOTÃO */
+.svc-btn {
+  display: inline-block;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #111113;
+  background: #e63946;
+  padding: .7rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.svc-btn:hover {
+  background: #c1121f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 57, 70, .3);
+  color: #fff;
+}
+
+/* CTA */
+.svc-cta {
+  background: #18181b;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.svc-cta-inner {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.svc-cta h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+
+.svc-cta p {
+  font-size: .95rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* MEDIA QUERIES — Mobile-First */
+
+@media (min-width: 640px) {
+  .svc-card {
+    flex-direction: row;
+  }
+
+  .svc-img-wrap {
+    width: 42%;
+    height: auto;
+    min-height: 340px;
+    flex-shrink: 0;
+  }
+
+  .svc-conteudo {
+    flex: 1;
+    padding: 2rem 2.25rem;
+  }
+
+  .svc-card--invertido {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 900px) {
+  .svc-main {
+    padding: 4rem 2rem;
+    gap: 3.5rem;
+  }
+
+  .svc-img-wrap {
+    width: 38%;
+    min-height: 400px;
+  }
+
+  .svc-conteudo h2 {
+    font-size: 1.8rem;
+  }
+
+  .svc-lista-nao-ord {
+    gap: .5rem 1.5rem;
+  }
+}
