@@ -74,6 +74,89 @@ img{
     --fonte-label: 'JetBrains Mono', monospace;
 }
 
+
+/*****************************/
+/******** HERO HEADER ********/
+/*****************************/
+.imgheader {
+    background-image:
+        linear-gradient(
+            to top,
+            #0A0A0A 0%,
+            rgba(0,0,0,0.7) 20%,
+            rgba(0,0,0,0.2) 50%,
+            rgba(0,0,0,0) 80%
+        ),
+        url(img/carro.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    padding: 280px 125px;
+}
+
+.subtitulo {
+    color: var(--cor-vermelha);
+    font-family: var(--fonte-label);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero .h1, .hero .h1-raw {
+    font-size: 80px;
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    margin: 0;
+}
+
+.hero .h1 span {
+    color: var(--cor-vermelha);
+    text-shadow: 0 0 10px rgba(227, 6, 21, 0.623);
+}
+
+.descricao {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.btn-container {
+    padding-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.btn, .btnred {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-texto);
+    padding: 12px 24px;
+    font-family: var(--fonte-titulo);
+    transition: 0.3s;
+}
+
+.btn {
+    border: 1px solid var(--cor-borda);
+}
+
+.btnred {
+    border: 1px solid var(--cor-vermelha);
+}
+
+.btn:hover, .btnred:hover {
+    background-color: var(--cor-vermelha);
+    box-shadow: 0 0 15px rgba(227, 6, 19, 0.5);
+    color: var(--cor-texto) !important;
+}
+
+
+
+
+
 /*****************************/
 /******** SEÇÕES **************/
 /*****************************/
