@@ -57,7 +57,7 @@
 .btn{
     display: inline-block;
     background-color: transparent;
-    color: var(--cor-texto);
+    /* color: var(--cor-texto); */
     border: 1px solid var(--cor-borda);
     padding: 12px 24px;
     font-family: var(--fonte-titulo);
@@ -77,6 +77,7 @@
 .btn:hover, .btnred:hover{
     background-color: var(--cor-vermelha);
     box-shadow: 0 0 15px rgba(227,6,19,0.5);
+    color: var(--cor-texto) !important;
 }
 
 /* Nav */

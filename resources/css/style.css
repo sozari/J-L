@@ -363,7 +363,7 @@ section{
         left: 0 !important;
         background-color: rgba(10, 10, 10, 0.98) !important;
         border-bottom: 1px solid var(--cor-borda) !important;
-        padding: 20px 0 !important;
+        padding: 20px 0 100px 0 !important;
         text-align: center !important;
         gap: 20px !important;
         z-index: 999 !important;
