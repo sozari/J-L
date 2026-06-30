@@ -109,9 +109,9 @@ section{
 /******** FEATURES ***********/
 /*****************************/
 .features{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    display: block; 
+    padding: 80px 125px;
+    overflow: hidden; 
 }
 
 .feature-card{
@@ -119,6 +119,7 @@ section{
     padding: 30px;
     border-left: 2px solid var(--cor-vermelha);
     transition: 0.3s;
+    height: auto;
 }
 
 .feature-card:hover{
@@ -338,7 +339,7 @@ section{
         padding-right: 80px;
     }
 
-    .features, .services-grid, .footer-content{
+    .services-grid, .footer-content{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -394,7 +395,7 @@ section{
         font-size: 56px;
     }
 
-    .features, .services-grid, .about, .contact, .testimonials-grid{
+    .services-grid, .about, .contact, .testimonials-grid{
         flex-direction: column;
         grid-template-columns: 1fr;
     }

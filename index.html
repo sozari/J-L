@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="vendors/css/normalize.css">
+    <!-- CSS do SwiperJS obrigatório para os estilos do carrossel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/headerFouter.css">
 
@@ -73,28 +76,31 @@
 
     <main>
 
-        <section class="features">
+        <!-- SEÇÃO DO CARROSSEL PASSANDO DE 2 EM 2 -->
+        <section class="features swiper">
+            <div class="swiper-wrapper">
 
-            <div class="feature-card">
-                <p class="h3">Fast Service</p>
-                <p>Serviço rápido com qualidade e atenção aos detalhes.</p>
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Fast Service</p>
+                    <p>Serviço rápido com qualidade e atenção aos detalhes.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Modern Equipment</p>
+                    <p>Equipamentos modernos para diagnósticos precisos.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Qualified Mechanics</p>
+                    <p>Mecânicos experientes e especializados.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Service Warranty</p>
+                    <p>Garantia em todos os serviços realizados.</p>
+                </div>
+
             </div>
-
-            <div class="feature-card">
-                <p class="h3">Modern Equipment</p>
-                <p>Equipamentos modernos para diagnósticos precisos.</p>
-            </div>
-
-            <div class="feature-card">
-                <p class="h3">Qualified Mechanics</p>
-                <p>Mecânicos experientes e especializados.</p>
-            </div>
-
-            <div class="feature-card">
-                <p class="h3">Service Warranty</p>
-                <p>Garantia em todos os serviços realizados.</p>
-            </div>
-
         </section>
 
         <section class="services" id="services">
@@ -298,7 +304,27 @@
 
     </footer>
 
+    <!-- Script principal do SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Script de Configuração Modificado -->
     <script>
+        const swiper = new Swiper('.features', {
+            loop: true,
+            spaceBetween: 30,      // Espaço entre as caixas
+            speed: 1000,           // Tempo da animação de deslizar (1 segundo de transição suave)
+            autoplay: {
+                delay: 4000,       // Fica parado mostrando os 2 cards por 4 segundos antes de mudar
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1 },  // No celular: mostra 1 card por vez
+                768: { slidesPerView: 2 },  // No tablet: mostra 2 cards por vez
+                1024: { slidesPerView: 2 } // No computador: Fica fixo mostrando 2 cards por vez!
+            }
+        });
+
+        // Script do Menu Hamburguer original
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         const navBtn = document.querySelector('.nav-btn-container');
