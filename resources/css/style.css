@@ -31,6 +31,7 @@ body{
     background-color: #0A0A0A;
     color: #E5E2E1;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Links */
@@ -94,14 +95,12 @@ section{
     margin-bottom: 10px;
 }
 
-.section-title .h2{
+.section-title .h2, .services .h2 {
     font-size: 42px;
     font-weight: 700;
 }
 
 .services .h2 {
-    font-size: 42px;
-    font-weight: 700;
     margin-bottom: 30px;
 }
 
@@ -111,6 +110,8 @@ section{
 .features{
     display: block; 
     padding: 80px 125px;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden; 
 }
 
@@ -412,11 +413,11 @@ section{
     }
 
     .hero{
-        padding: 140px 20px 60px 20px;
+        padding: 140px 20px 60px 20px !important; /* Corrigido conflito de paddings que quebravam a tela */
     }
 
-    .hero .h1, .hero .h1-raw{
-        font-size: 34px;
+    .hero .h1, .hero .h1-raw, .hero .h1 span{
+        font-size: 34px !important;
         line-height: 1.2;
     }
 
@@ -436,8 +437,8 @@ section{
         width: 100%;
     }
 
-    section, .about, .contact, .testimonials{
-        padding: 60px 20px;
+    section, .about, .contact, .testimonials, .features{
+        padding: 60px 20px !important;
     }
 
     .about-content .h2, .contact-info .h2, .section-title .h2, .services .h2{
@@ -451,16 +452,4 @@ section{
     footer{
         padding: 40px 20px;
     }
-    
-    .hero .h1-raw{
-        font-size: 48px !important;
-    }    
-
-    .hero .h1 span  {
-        font-size: 48px;
-    }
-
-    .hero {
-    padding: 160px 100px !important;
-}
 }
