@@ -1,5 +1,3 @@
-
-
 /*****************************/
 /******** HERO HEADER ********/
 /*****************************/
@@ -19,10 +17,6 @@
     background-position: center;
 }
 
-
-
-
-
 .hero{
     padding: 280px 125px;
 }
@@ -36,18 +30,17 @@
     font-weight: 700;
 }
 
-.hero h1{
+.hero .h1, .hero .h1-raw {
     font-size: 80px;
     font-family: var(--fonte-titulo);
+    font-weight: 800;
+    margin: 0;
 }
 
-
-
-.hero h1 span{
+.hero .h1 span{
     color: var(--cor-vermelha);
     text-shadow: 0 0 10px rgba(227, 6, 21, 0.623);
 }
-
 
 .descricao{
     color: var(--cor-texto-secundario);
@@ -83,19 +76,21 @@
 
 .btn:hover, .btnred:hover{
     background-color: var(--cor-vermelha);
-
     box-shadow: 0 0 15px rgba(227,6,19,0.5);
 }
 
 /* Nav */
 .main-nav{
+    position: relative;
     padding: 12px 260px;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--cor-borda);
+    z-index: 1000;
 }
+
 .main-nav ul{
     display: flex;
     gap: 14px;
@@ -111,10 +106,12 @@
     padding: 4px 6px;
     transition: color 0.2s, background 0.2s;
 }
+
 .main-nav a:hover{
     color: var(--cor-vermelha);
 }
-.main-nav h1{
+
+.main-nav .h1{
     font-size: 18px;
     margin: 0;
     font-family: var(--fonte-titulo);
@@ -122,27 +119,50 @@
     color: var(--cor-texto);
     line-height: 1;
 }
+
 .main-nav .btn{
     padding: 6px 10px;
     font-size: 13px;
 }
 
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-texto);
+    transition: 0.3s ease;
+}
 
-
-
-
-
-
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 
 /*****************************/
 /******** FOOTER *************/
 /*****************************/
-
 footer{
     border-top: 1px solid var(--cor-borda);
     padding: 60px 125px 20px;
-    position: absolute;
+    width: 100%;
+    background-color: var(--cor-fundo);
 }
 
 .footer-content{
@@ -151,11 +171,12 @@ footer{
     gap: 40px;
 }
 
-.footer-content h4{
+.footer-content .h4{
     color: var(--cor-vermelha);
     font-family: var(--fonte-label);
     font-size: 11px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .footer-content ul li{
@@ -173,4 +194,3 @@ footer{
     font-size: 12px;
     color: #777;
 }
-
