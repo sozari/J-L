@@ -13,22 +13,15 @@
 html{
     background-color: #615959;
     color: #E5E2E1;
-
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 16px;
     font-weight: 400;
-
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
 }
 
-/* Títulos */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+/* Estilos de Texto Convertidos de tags <h> para Classes */
+.h1, .h2, .h3, .h4, .h5, .h6, .h1-raw {
     font-family: 'Sora', sans-serif;
     color: #E5E2E1;
 }
@@ -38,6 +31,7 @@ body{
     background-color: #0A0A0A;
     color: #E5E2E1;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Links */
@@ -60,39 +54,29 @@ img{
 /*****************************/
 /******** VARIÁVEIS **********/
 /*****************************/
-
 :root{
-    /* Cores principais */
     --cor-fundo: #0A0A0A;
     --cor-card: #212121;
     --cor-card-hover: #1C1B1B;
-
     --cor-vermelha: #E30613;
     --cor-vermelha-clara: #FFB4AA;
-
     --cor-texto: #E5E2E1;
     --cor-texto-secundario: #E9BCB6;
-
     --cor-borda: rgba(255,255,255,0.1);
 
-    /* Espaçamentos */
     --esp-1: 8px;
     --esp-2: 16px;
     --esp-3: 24px;
     --esp-4: 48px;
 
-    /* Fontes */
     --fonte-titulo: 'Sora', sans-serif;
     --fonte-texto: 'Hanken Grotesk', sans-serif;
     --fonte-label: 'JetBrains Mono', monospace;
 }
 
-
-
 /*****************************/
 /******** SEÇÕES **************/
 /*****************************/
-
 section{
     padding: 80px 125px;
 }
@@ -111,18 +95,24 @@ section{
     margin-bottom: 10px;
 }
 
-.section-title h2{
+.section-title .h2, .services .h2 {
     font-size: 42px;
+    font-weight: 700;
+}
+
+.services .h2 {
+    margin-bottom: 30px;
 }
 
 /*****************************/
 /******** FEATURES ***********/
 /*****************************/
-
 .features{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    display: block; 
+    padding: 80px 125px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; 
 }
 
 .feature-card{
@@ -130,15 +120,17 @@ section{
     padding: 30px;
     border-left: 2px solid var(--cor-vermelha);
     transition: 0.3s;
+    height: auto;
 }
 
 .feature-card:hover{
     background-color: var(--cor-card-hover);
 }
 
-.feature-card h3{
+.feature-card .h3{
     margin: 15px 0;
     font-size: 22px;
+    font-weight: 600;
 }
 
 .feature-card p{
@@ -149,7 +141,6 @@ section{
 /*****************************/
 /******** SERVIÇOS ***********/
 /*****************************/
-
 .services-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -158,6 +149,7 @@ section{
 
 .service-card{
     background-color: var(--cor-card);
+    overflow: hidden;
 }
 
 .service-card img{
@@ -177,8 +169,10 @@ section{
     text-transform: uppercase;
 }
 
-.service-content h3{
+.service-content .h3{
     margin: 10px 0 15px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .service-content p{
@@ -192,40 +186,24 @@ section{
     font-size: 11px;
 }
 
-
-
-
-.service-card {
-    overflow: hidden; /* Garante que o zoom da imagem não saia do card */
-}
-
-
 .imgService {
-    filter: grayscale(100%); /* Começa cinza */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Transição suave */
-    
-    
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
-
 
 .service-card:hover .imgService {
     filter: none;
-    transform: scale(1.08); /* Dá o zoom de 8% na imagem */
+    transform: scale(1.08);
 }
-
-
 
 /*****************************/
 /******** SOBRE **************/
 /*****************************/
-
 .about{
     display: flex;
     align-items: center;
     gap: 60px;
-
     padding: 100px 125px;
-
     background-color: var(--cor-card);
 }
 
@@ -242,9 +220,10 @@ section{
     flex: 1;
 }
 
-.about-content h2{
+.about-content .h2{
     font-size: 48px;
     margin: 20px 0;
+    font-weight: 700;
 }
 
 .about-content p{
@@ -261,9 +240,11 @@ section{
     margin-top: 25px;
 }
 
-.about-years h3{
+.about-years .h3{
     color: white;
     font-size: 32px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .about-years p{
@@ -272,75 +253,9 @@ section{
     margin: 0;
 }
 
-
 /*****************************/
 /******* DEPOIMENTOS *********/
 /*****************************/
-
-.testimonials{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.testimonial{
-    background-color: var(--cor-card);
-    padding: 35px;
-}
-
-.testimonial p{
-    color: var(--cor-texto-secundario);
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.testimonial h4{
-    margin-bottom: 5px;
-}
-
-.testimonial span{
-    color: var(--cor-vermelha);
-    font-size: 11px;
-    font-family: var(--fonte-label);
-}
-
-/*****************************/
-/******** CONTATO ************/
-/*****************************/
-
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.contact-info{
-    background-color: var(--cor-card);
-    padding: 40px;
-}
-
-.contact-info h2{
-    font-size: 48px;
-    margin-bottom: 30px;
-}
-
-.contact-info p{
-    margin-bottom: 20px;
-    color: var(--cor-texto-secundario);
-}
-
-.contact-map img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-/*****************************/
-/******** DEPOIMENTOS ********/
-/*****************************/
-
 .testimonials{
     padding: 100px 125px;
 }
@@ -359,12 +274,20 @@ section{
 .testimonial-card p{
     line-height: 1.8;
     color: var(--cor-texto-secundario);
-
     margin-bottom: 20px;
 }
 
-.testimonial-card h4{
+.testimonial-card .h4{
     margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.testimonial-card h1{
+    line-height: 1.8;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
 }
 
 .testimonial-card span{
@@ -372,16 +295,12 @@ section{
     font-size: 12px;
 }
 
-
 /*****************************/
 /******** CONTATO ************/
 /*****************************/
-
-
 .contact{
     display: flex;
     gap: 50px;
-
     padding: 100px 125px;
 }
 
@@ -389,10 +308,10 @@ section{
     flex: 1;
 }
 
-.contact-info h2{
+.contact-info .h2{
     font-size: 48px;
-
     margin: 20px 0;
+    font-weight: 700;
 }
 
 .contact-info ul{
@@ -407,88 +326,86 @@ section{
     flex: 1;
 }
 
-.contact-map img{
-    width: 100%;
+.mapa-responsivo iframe {
+    width: 100% !important;
+    max-width: 100%;
     height: 100%;
+    min-height: 350px;
     object-fit: cover;
 }
-
-
-
-
-
 
 /*****************************/
 /******** RESPONSIVO *********/
 /*****************************/
-
 @media (max-width: 1200px){
-
     .main-nav{
         padding: 12px 80px;
     }
 
-    .hero,
-    section,
-    .about,
-    .contact,
-    .testimonials{
+    .hero, section, .about, .contact, .testimonials{
         padding-left: 80px;
         padding-right: 80px;
     }
 
-    .features{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .services-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-content{
+    .services-grid, .footer-content{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 900px){
-
-    .main-nav{
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+    .main-nav {
+        padding: 20px 40px !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
     }
 
-    .main-nav ul{
-        flex-wrap: wrap;
-        justify-content: center;
+    .menu-toggle {
+        display: flex !important;
+    }
+
+    .nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        background-color: rgba(10, 10, 10, 0.98) !important;
+        border-bottom: 1px solid var(--cor-borda) !important;
+        padding: 20px 0 100px 0 !important;
+        text-align: center !important;
+        gap: 20px !important;
+        z-index: 999 !important;
+    }
+
+    .nav-btn-container {
+        display: none !important;
+        position: absolute !important;
+        top: 240px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 1000 !important;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+    
+    .nav-btn-container.active {
+        display: block !important;
     }
 
     .hero{
         padding: 180px 40px;
     }
 
-    .hero h1{
+    .hero .h1, .hero .h1-raw{
         font-size: 56px;
     }
 
-    .features{
+    .services-grid, .about, .contact, .testimonials-grid{
+        flex-direction: column;
         grid-template-columns: 1fr;
-    }
-
-    .services-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .about{
-        flex-direction: column;
-    }
-
-    .contact{
-        flex-direction: column;
-    }
-
-    .testimonials-grid{
-        flex-direction: column;
     }
 
     .footer-content{
@@ -498,14 +415,17 @@ section{
 }
 
 @media (max-width: 600px){
-
-    .hero{
-        padding: 150px 20px;
+    .main-nav {
+        padding: 20px !important;
     }
 
-    .hero h1{
-        font-size: 38px;
-        line-height: 1.1;
+    .hero{
+        padding: 140px 20px 60px 20px !important; /* Corrigido conflito de paddings que quebravam a tela */
+    }
+
+    .hero .h1, .hero .h1-raw, .hero .h1 span{
+        font-size: 34px !important;
+        line-height: 1.2;
     }
 
     .descricao{
@@ -514,19 +434,21 @@ section{
 
     .btn-container{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        width: 100%;
+        gap: 12px;
     }
 
-    section,
-    .about,
-    .contact,
-    .testimonials{
-        padding: 60px 20px;
+    .btn, .btnred{
+        text-align: center;
+        width: 100%;
     }
 
-    .about-content h2,
-    .contact-info h2,
-    .section-title h2{
+    section, .about, .contact, .testimonials, .features{
+        padding: 60px 20px !important;
+    }
+
+    .about-content .h2, .contact-info .h2, .section-title .h2, .services .h2{
         font-size: 32px;
     }
 
@@ -534,7 +456,7 @@ section{
         height: 200px;
     }
 
-    .footer{
+    footer{
         padding: 40px 20px;
     }
 }

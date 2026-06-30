@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="vendors/css/normalize.css">
+    <!-- CSS do SwiperJS obrigatório para os estilos do carrossel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/headerFouter.css"
+    <link rel="stylesheet" href="resources/css/headerFouter.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
@@ -18,40 +21,42 @@
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="main-nav">
         <div>
-            <h1>J&L</h1>
+            <p class="h1">J&L</p>
         </div>
 
-        <ul>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Serviços</a></li>
             <li><a href="#about">Sobre Nós</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
 
-        <div>
-            <a href="#" class="btn">Whatsapp</a>
+        <div class="nav-btn-container">
+            <a href="https://web.whatsapp.com/" class="btn">Whatsapp</a>
         </div>
     </nav>
 
-    <!-- HERO -->
     <header class="hero imgheader" id="home">
 
         <p class="subtitulo">
             J&L MANUTENÇÃO AUTOMOTIVA
         </p>
 
-        <h1>PRECISÃO EM</h1>
+        <p class="h1-raw">PRECISÃO EM</p>
 
-        <h1>
+        <p class="h1">
             <span>CADA DETALHE</span>
-        </h1>
+        </p>
 
         <p class="descricao">
-
-            <!-- h1 -->
             Serviços automotivos com qualidade, transparência e equipamentos modernos.
         </p>
 
@@ -69,42 +74,42 @@
 
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- DIFERENCIAIS -->
-        <section class="features">
+        <!-- SEÇÃO DO CARROSSEL PASSANDO DE 2 EM 2 -->
+        <section class="features swiper">
+            <div class="swiper-wrapper">
 
-            <div class="feature-card">
-                <h3>Fast Service</h3>
-                <p>Serviço rápido com qualidade e atenção aos detalhes.</p>
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Fast Service</p>
+                    <p>Serviço rápido com qualidade e atenção aos detalhes.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Modern Equipment</p>
+                    <p>Equipamentos modernos para diagnósticos precisos.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Qualified Mechanics</p>
+                    <p>Mecânicos experientes e especializados.</p>
+                </div>
+
+                <div class="feature-card swiper-slide">
+                    <p class="h3">Service Warranty</p>
+                    <p>Garantia em todos os serviços realizados.</p>
+                </div>
+
             </div>
-
-            <div class="feature-card">
-                <h3>Modern Equipment</h3>
-                <p>Equipamentos modernos para diagnósticos precisos.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Qualified Mechanics</h3>
-                <p>Mecânicos experientes e especializados.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Service Warranty</h3>
-                <p>Garantia em todos os serviços realizados.</p>
-            </div>
-
         </section>
 
-        <!-- SERVIÇOS -->
         <section class="services" id="services">
 
             <p class="section-subtitle">
                 NOSSAS ESPECIALIDADES
             </p>
 
-            <h2>Serviços de Elite</h2>
+            <p class="h2">Serviços de Elite</p>
 
             <div class="services-grid">
 
@@ -114,7 +119,7 @@
 
                     <div class="service-content">
                         <span>SAFETY & PERFORMANCE</span>
-                        <h3>Freios</h3>
+                        <p class="h3">Freios</p>
                         <p>Manutenção e revisão completa do sistema de freios.</p>
                     </div>
 
@@ -126,7 +131,7 @@
 
                     <div class="service-content">
                         <span>STABILITY & CONTROL</span>
-                        <h3>Suspensão</h3>
+                        <p class="h3">Suspensão</p>
                         <p>Diagnóstico e manutenção da suspensão.</p>
                     </div>
 
@@ -138,7 +143,7 @@
 
                     <div class="service-content">
                         <span>SYSTEM ANALYSIS</span>
-                        <h3>Diagnóstico</h3>
+                        <p class="h3">Diagnóstico</p>
                         <p>Scanner automotivo e diagnóstico eletrônico.</p>
                     </div>
 
@@ -148,7 +153,6 @@
 
         </section>
 
-        <!-- SOBRE NÓS -->
         <section id="about" class="about">
 
             <div class="about-img">
@@ -161,9 +165,9 @@
                     SOBRE NÓS
                 </p>
 
-                <h2>
+                <p class="h2">
                     Confiança e Qualidade em Cada Serviço
-                </h2>
+                </p>
 
                 <p>
                     Na J&L Manutenção Automotiva, tratamos cada veículo com atenção aos detalhes e compromisso com a
@@ -177,32 +181,31 @@
                 </p>
 
                 <div class="about-years">
-                    <h3>15+</h3>
+                    <p class="h3">15+</p>
                     <p>ANOS DE EXPERIÊNCIA</p>
                 </div>
 
             </div>
 
         </section>
-<!-- pesquisar <blockquote> -->
-        <!-- DEPOIMENTOS -->
+
         <section class="testimonials">
 
             <div class="section-title">
                 <p>DEPOIMENTOS</p>
-                <h2>O que nossos clientes dizem</h2>
+                <p class="h2">O que nossos clientes dizem</p>
             </div>
 
             <div class="testimonials-grid">
 
                 <article class="testimonial-card"> 
 
-                    <p>
+                    <h1>
                         "Atendimento excelente, serviço rápido e transparente. Recomendo para qualquer pessoa que busca
                         confiança."
-                    </p>
+                    </h1>
 
-                    <h4>João Silva</h4>
+                    <p class="h4">João Silva</p>
 
                     <span>Cliente há 5 anos</span>
 
@@ -214,7 +217,7 @@
                         "Resolveram um problema que outras oficinas não conseguiram identificar. Serviço impecável."
                     </p>
 
-                    <h4>Maria Souza</h4>
+                    <p class="h4">Maria Souza</p>
 
                     <span>Cliente</span>
 
@@ -224,7 +227,6 @@
 
         </section>
 
-        <!-- CONTATO -->
         <section id="contact" class="contact">
 
             <div class="contact-info">
@@ -233,9 +235,9 @@
                     CONTATO
                 </p>
 
-                <h2>
+                <p class="h2">
                     Vamos cuidar do seu veículo?
-                </h2>
+                </p>
 
                 <p>
                     Entre em contato conosco para agendar uma avaliação ou solicitar um orçamento.
@@ -247,64 +249,100 @@
                     <li>✉ contato@jlauto.com.br</li>
                 </ul>
 
-                <a href="#" class="btnred">
+                <a href="https://web.whatsapp.com/" class="btnred">
                     CHAMAR NO WHATSAPP
                 </a>
 
             </div>
 
             <div class="contact-map">
-
-               <div class="mapa-responsivo">
-  <iframe src="https://google.com?..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-
-
+                <div class="mapa-responsivo">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8266.3457682938!2d-51.229198423674646!3d-30.03526983085248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197906a9d397f5%3A0x514b4935e97fbf4d!2sUniSenac%20-%20Campus%20Porto%20Alegre%20I!5e1!3m2!1spt-BR!2sbr!4v1782850576150!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
 
         </section>
 
+    </main>
 
+    <footer>
 
+        <div class="footer-content">
+
+            <div>
+                <p class="h3">J&L</p>
+
+                <p>
+                    Manutenção automotiva com qualidade, transparência e confiança.
+                </p>
+            </div>
+
+            <div>
+                <p class="h4">Serviços</p>
+
+                <ul>
+                    <li>Freios</li>
+                    <li>Suspensão</li>
+                    <li>Diagnóstico</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="h4">Contato</p>
+
+                <ul>
+                    <li>(51) 99999-9999</li>
+                    <li>Porto Alegre - RS</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 J&L Manutenção Automotiva
+        </div>
+
+    </footer>
+
+    <!-- Script principal do SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Script de Configuração Modificado -->
+    <script>
+        const swiper = new Swiper('.features', {
+            loop: true,
+            spaceBetween: 30,      // Espaço entre as caixas
+            speed: 1000,           // Tempo da animação de deslizar (1 segundo de transição suave)
+            autoplay: {
+                delay: 4000,       // Fica parado mostrando os 2 cards por 4 segundos antes de mudar
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1 },  // No celular: mostra 1 card por vez
+                768: { slidesPerView: 2 },  // No tablet: mostra 2 cards por vez
+                1024: { slidesPerView: 2 } // No computador: Fica fixo mostrando 2 cards por vez!
+            }
+        });
+
+        // Script do Menu Hamburguer original
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navBtn = document.querySelector('.nav-btn-container');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navBtn.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                navBtn.classList.remove('active');
+            });
+        });
+    </script>
 </body>
-
-<footer>
-
-    <div class="footer-content">
-
-        <div>
-            <h3>J&L</h3>
-
-            <p>
-                Manutenção automotiva com qualidade, transparência e confiança.
-            </p>
-        </div>
-
-        <diiv>
-            <h4>Serviços</h4>
-
-            <ul>
-                <li>Freios</li>
-                <li>Suspensão</li>
-                <li>Diagnóstico</li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Contato</h4>
-
-            <ul>
-                <li>(51) 99999-9999</li>
-                <li>Porto Alegre - RS</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2025 J&L Manutenção Automotiva
-    </div>
-
-</footer>
 
 </html>
