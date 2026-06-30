@@ -17,23 +17,50 @@
   <title>Serviços — J&L Mecânica Automotiva</title>
 </head>
 
+<!-- JS — Menu hamburguer -->
+<script>
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('nav-links');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      var aberto = nav.classList.toggle('aberto');
+      btn.classList.toggle('aberto', aberto);
+      btn.setAttribute('aria-expanded', aberto);
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('aberto');
+        btn.classList.remove('aberto');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }());
+</script>
+
 <body class="pg-servicos">
 
   <!-- NAV -->
-  <nav class="main-nav">
-    <div>
-      <h1>J&L</h1>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="servicos.html" class="nav-ativo">Serviços</a></li>
-      <li><a href="index.html#about">Sobre Nós</a></li>
-      <li><a href="index.html#contact">Contato</a></li>
-    </ul>
-    <div>
-      <a href="index.html#contact" class="btn">Whatsapp</a>
-    </div>
-  </nav>
+  <!-- NAV -->
+<nav class="main-nav">
+  <div>
+    <h1>J&L</h1>
+  </div>
+  <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="servicos.html" class="nav-ativo">Serviços</a></li>
+    <li><a href="index.html#about">Sobre Nós</a></li>
+    <li><a href="index.html#contact">Contato</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="index.html#contact" class="btn">Whatsapp</a>
+  </div>
+</nav>
 
   <!-- HERO -->
   <header class="svc-hero">
