@@ -283,6 +283,13 @@ section{
     font-weight: 600;
 }
 
+.testimonial-card h1{
+    line-height: 1.8;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
 .testimonial-card span{
     color: var(--cor-vermelha);
     font-size: 12px;
