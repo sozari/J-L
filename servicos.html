@@ -17,32 +17,8 @@
   <title>Serviços — J&L Mecânica Automotiva</title>
 </head>
 
-<!-- JS — Menu hamburguer -->
-<script>
-  (function () {
-    var btn = document.getElementById('hamburger');
-    var nav = document.getElementById('nav-links');
-    if (!btn || !nav) return;
-
-    btn.addEventListener('click', function () {
-      var aberto = nav.classList.toggle('aberto');
-      btn.classList.toggle('aberto', aberto);
-      btn.setAttribute('aria-expanded', aberto);
-    });
-
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('aberto');
-        btn.classList.remove('aberto');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }());
-</script>
-
 <body class="pg-servicos">
 
-  <!-- NAV -->
   <!-- NAV -->
 <nav class="main-nav">
   <div>
@@ -80,8 +56,7 @@
     <!-- FREIOS -->
     <article class="svc-card" id="freios">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/brakes.png" alt="Sistema de freios — disco ventilado com pinça esportiva"
-          width="800" height="800" loading="lazy" />
+        <img src="resources/css/img/brakes.png" alt="Sistema de freios — disco ventilado com pinça esportiva" loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">SAFETY &amp; PERFORMANCE</span>
@@ -115,8 +90,7 @@
     <!-- SUSPENSÃO -->
     <article class="svc-card svc-card--invertido" id="suspensao">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/suspension.png" alt="Amortecedor e mola de suspensão sendo instalados" width="800"
-          height="800" loading="lazy" />
+        <img src="resources/css/img/suspension.png" alt="Amortecedor e mola de suspensão sendo instalados" loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">STABILITY &amp; CONTROL</span>
@@ -150,8 +124,7 @@
     <!-- TROCA DE ÓLEO -->
     <article class="svc-card" id="oleo">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/mecanic.png" alt="Mecânico J&L realizando troca de óleo e filtros" width="800"
-          height="800" loading="lazy" />
+        <img src="resources/css/img/mecanic.png" alt="Mecânico J&L realizando troca de óleo e filtros" loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">ENGINE CARE</span>
@@ -185,8 +158,7 @@
     <!-- DIAGNÓSTICO ELETRÔNICO -->
     <article class="svc-card svc-card--invertido" id="diagnostico">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/system.png" alt="Diagnóstico eletrônico com scanner automotivo conectado ao veículo"
-          width="800" height="800" loading="lazy" />
+        <img src="resources/css/img/system.png" alt="Diagnóstico eletrônico com scanner automotivo conectado ao veículo" loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">SYSTEM ANALYSIS</span>
@@ -229,34 +201,64 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div>
-        <h3>J&L</h3>
-        <p>Manutenção automotiva com qualidade, transparência e confiança.</p>
-      </div>
-      <div>
-        <h4>Serviços</h4>
-        <ul>
-          <li><a href="#freios">Freios</a></li>
-          <li><a href="#suspensao">Suspensão</a></li>
-          <li><a href="#oleo">Troca de Óleo</a></li>
-          <li><a href="#diagnostico">Diagnóstico</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li>(51) 99999-9999</li>
-          <li>Porto Alegre — RS</li>
-          <li>contato@jlauto.com.br</li>
-        </ul>
-      </div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h3>J&L</h3>
+      <p>Manutenção automotiva com qualidade, transparência e confiança.</p>
     </div>
-    <div class="footer-bottom">
-      © 2025 J&L Manutenção Automotiva
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#freios">Freios</a></li>
+        <li><a href="#suspensao">Suspensão</a></li>
+        <li><a href="#oleo">Troca de Óleo</a></li>
+        <li><a href="#diagnostico">Diagnóstico</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="tel:+555199999999">📞 (51) 99999-9999</a></li>
+        <li><a href="mailto:contato@jlauto.com.br">✉️ contato@jlauto.com.br</a></li>
+        <li>📍 Porto Alegre — RS</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">📘 Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">📷 Instagram</a></li>
+        <li><a href="https://wa.me/555199999999" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 J&L Manutenção Automotiva. Todos os direitos reservados.
+  </div>
+</footer>
+<!-- JS — Menu hamburguer -->
+<script>
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('nav-links');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      var aberto = nav.classList.toggle('aberto');
+      btn.classList.toggle('aberto', aberto);
+      btn.setAttribute('aria-expanded', aberto);
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('aberto');
+        btn.classList.remove('aberto');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }());
+</script>
 
 </body>
 
