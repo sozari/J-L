@@ -3,14 +3,14 @@
 /*****************************/
 
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Configurações gerais */
-html{
+html {
     background-color: #615959;
     color: #E5E2E1;
     font-family: 'Hanken Grotesk', sans-serif;
@@ -21,13 +21,19 @@ html{
 }
 
 /* Estilos de Texto Convertidos de tags <h> para Classes */
-.h1, .h2, .h3, .h4, .h5, .h6, .h1-raw {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.h1-raw {
     font-family: 'Sora', sans-serif;
     color: #E5E2E1;
 }
 
 /* Corpo */
-body{
+body {
     background-color: #0A0A0A;
     color: #E5E2E1;
     overflow-x: hidden;
@@ -35,18 +41,18 @@ body{
 }
 
 /* Links */
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 /* Listas */
-ul{
+ul {
     list-style: none;
 }
 
 /* Imagens */
-img{
+img {
     max-width: 100%;
     display: block;
 }
@@ -54,7 +60,7 @@ img{
 /*****************************/
 /******** VARIÁVEIS **********/
 /*****************************/
-:root{
+:root {
     --cor-fundo: #0A0A0A;
     --cor-card: #212121;
     --cor-card-hover: #1C1B1B;
@@ -62,7 +68,7 @@ img{
     --cor-vermelha-clara: #FFB4AA;
     --cor-texto: #E5E2E1;
     --cor-texto-secundario: #E9BCB6;
-    --cor-borda: rgba(255,255,255,0.1);
+    --cor-borda: rgba(255, 255, 255, 0.1);
 
     --esp-1: 8px;
     --esp-2: 16px;
@@ -80,13 +86,11 @@ img{
 /*****************************/
 .imgheader {
     background-image:
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             #0A0A0A 0%,
-            rgba(0,0,0,0.7) 20%,
-            rgba(0,0,0,0.2) 50%,
-            rgba(0,0,0,0) 80%
-        ),
+            rgba(0, 0, 0, 0.7) 20%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0) 80%),
         url(img/carro.png);
     height: 100vh;
     background-size: cover;
@@ -106,7 +110,8 @@ img{
     font-weight: 700;
 }
 
-.hero .h1, .hero .h1-raw {
+.hero .h1,
+.hero .h1-raw {
     font-size: 80px;
     font-family: var(--fonte-titulo);
     font-weight: 800;
@@ -130,7 +135,8 @@ img{
     gap: 16px;
 }
 
-.btn, .btnred {
+.btn,
+.btnred {
     display: inline-block;
     background-color: transparent;
     color: var(--cor-texto);
@@ -147,7 +153,8 @@ img{
     border: 1px solid var(--cor-vermelha);
 }
 
-.btn:hover, .btnred:hover {
+.btn:hover,
+.btnred:hover {
     background-color: var(--cor-vermelha);
     box-shadow: 0 0 15px rgba(227, 6, 19, 0.5);
     color: var(--cor-texto) !important;
@@ -160,16 +167,16 @@ img{
 /*****************************/
 /******** SEÇÕES **************/
 /*****************************/
-section{
+section {
     padding: 80px 125px;
 }
 
-.section-title{
+.section-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.section-title p{
+.section-title p {
     color: var(--cor-vermelha);
     font-family: var(--fonte-label);
     font-size: 10px;
@@ -178,7 +185,8 @@ section{
     margin-bottom: 10px;
 }
 
-.section-title .h2, .services .h2 {
+.section-title .h2,
+.services .h2 {
     font-size: 42px;
     font-weight: 700;
 }
@@ -190,15 +198,15 @@ section{
 /*****************************/
 /******** FEATURES ***********/
 /*****************************/
-.features{
-    display: block; 
+.features {
+    display: block;
     padding: 80px 125px;
     width: 100%;
     max-width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-.feature-card{
+.feature-card {
     background-color: var(--cor-card);
     padding: 30px;
     border-left: 2px solid var(--cor-vermelha);
@@ -206,17 +214,17 @@ section{
     height: auto;
 }
 
-.feature-card:hover{
+.feature-card:hover {
     background-color: var(--cor-card-hover);
 }
 
-.feature-card .h3{
+.feature-card .h3 {
     margin: 15px 0;
     font-size: 22px;
     font-weight: 600;
 }
 
-.feature-card p{
+.feature-card p {
     color: var(--cor-texto-secundario);
     line-height: 1.6;
 }
@@ -224,46 +232,46 @@ section{
 /*****************************/
 /******** SERVIÇOS ***********/
 /*****************************/
-.services-grid{
+.services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.service-card{
+.service-card {
     background-color: var(--cor-card);
     overflow: hidden;
 }
 
-.service-card img{
+.service-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-.service-content{
+.service-content {
     padding: 25px;
 }
 
-.service-category{
+.service-category {
     color: var(--cor-vermelha);
     font-family: var(--fonte-label);
     font-size: 10px;
     text-transform: uppercase;
 }
 
-.service-content .h3{
+.service-content .h3 {
     margin: 10px 0 15px;
     font-size: 20px;
     font-weight: 600;
 }
 
-.service-content p{
+.service-content p {
     color: var(--cor-texto-secundario);
     margin-bottom: 20px;
 }
 
-.service-link{
+.service-link {
     color: var(--cor-vermelha);
     font-family: var(--fonte-label);
     font-size: 11px;
@@ -282,7 +290,7 @@ section{
 /*****************************/
 /******** SOBRE **************/
 /*****************************/
-.about{
+.about {
     display: flex;
     align-items: center;
     gap: 60px;
@@ -290,32 +298,32 @@ section{
     background-color: var(--cor-card);
 }
 
-.about-img{
+.about-img {
     flex: 1;
 }
 
-.about-img img{
+.about-img img {
     width: 100%;
     display: block;
 }
 
-.about-content{
+.about-content {
     flex: 1;
 }
 
-.about-content .h2{
+.about-content .h2 {
     font-size: 48px;
     margin: 20px 0;
     font-weight: 700;
 }
 
-.about-content p{
+.about-content p {
     color: var(--cor-texto-secundario);
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-.about-years{
+.about-years {
     background-color: var(--cor-vermelha);
     width: 120px;
     padding: 15px;
@@ -323,14 +331,14 @@ section{
     margin-top: 25px;
 }
 
-.about-years .h3{
+.about-years .h3 {
     color: white;
     font-size: 32px;
     font-weight: 700;
     margin: 0;
 }
 
-.about-years p{
+.about-years p {
     color: white;
     font-size: 10px;
     margin: 0;
@@ -339,41 +347,41 @@ section{
 /*****************************/
 /******* DEPOIMENTOS *********/
 /*****************************/
-.testimonials{
+.testimonials {
     padding: 100px 125px;
 }
 
-.testimonials-grid{
+.testimonials-grid {
     display: flex;
     gap: 30px;
 }
 
-.testimonial-card{
+.testimonial-card {
     background-color: var(--cor-card);
     padding: 35px;
     flex: 1;
 }
 
-.testimonial-card p{
+.testimonial-card p {
     line-height: 1.8;
     color: var(--cor-texto-secundario);
     margin-bottom: 20px;
 }
 
-.testimonial-card .h4{
+.testimonial-card .h4 {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 600;
 }
 
-.testimonial-card h1{
+.testimonial-card h1 {
     line-height: 1.8;
     font-size: 14px;
     color: var(--cor-texto-secundario);
     margin-bottom: 20px;
 }
 
-.testimonial-card span{
+.testimonial-card span {
     color: var(--cor-vermelha);
     font-size: 12px;
 }
@@ -381,31 +389,31 @@ section{
 /*****************************/
 /******** CONTATO ************/
 /*****************************/
-.contact{
+.contact {
     display: flex;
     gap: 50px;
     padding: 100px 125px;
 }
 
-.contact-info{
+.contact-info {
     flex: 1;
 }
 
-.contact-info .h2{
+.contact-info .h2 {
     font-size: 48px;
     margin: 20px 0;
     font-weight: 700;
 }
 
-.contact-info ul{
+.contact-info ul {
     margin: 30px 0;
 }
 
-.contact-info li{
+.contact-info li {
     margin-bottom: 15px;
 }
 
-.contact-map{
+.contact-map {
     flex: 1;
 }
 
@@ -420,22 +428,27 @@ section{
 /*****************************/
 /******** RESPONSIVO *********/
 /*****************************/
-@media (max-width: 1200px){
-    .main-nav{
+@media (max-width: 1200px) {
+    .main-nav {
         padding: 12px 80px;
     }
 
-    .hero, section, .about, .contact, .testimonials{
+    .hero,
+    section,
+    .about,
+    .contact,
+    .testimonials {
         padding-left: 80px;
         padding-right: 80px;
     }
 
-    .services-grid, .footer-content{
+    .services-grid,
+    .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
     .main-nav {
         padding: 20px 40px !important;
         flex-direction: row !important;
@@ -473,73 +486,88 @@ section{
     .nav-links.active {
         display: flex !important;
     }
-    
+
     .nav-btn-container.active {
         display: block !important;
     }
 
-    .hero{
+    .hero {
         padding: 180px 40px;
     }
 
-    .hero .h1, .hero .h1-raw{
+    .hero .h1,
+    .hero .h1-raw {
         font-size: 56px;
     }
 
-    .services-grid, .about, .contact, .testimonials-grid{
+    .services-grid,
+    .about,
+    .contact,
+    .testimonials-grid {
         flex-direction: column;
         grid-template-columns: 1fr;
     }
 
-    .footer-content{
+    .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     .main-nav {
         padding: 20px !important;
     }
 
-    .hero{
-        padding: 140px 20px 60px 20px !important; /* Corrigido conflito de paddings que quebravam a tela */
+    .hero {
+        padding: 140px 20px 60px 20px !important;
+        /* Corrigido conflito de paddings que quebravam a tela */
     }
 
-    .hero .h1, .hero .h1-raw, .hero .h1 span{
+    .hero .h1,
+    .hero .h1-raw,
+    .hero .h1 span {
         font-size: 34px !important;
         line-height: 1.2;
     }
 
-    .descricao{
+    .descricao {
         font-size: 14px;
     }
 
-    .btn-container{
+    .btn-container {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
         gap: 12px;
     }
 
-    .btn, .btnred{
+    .btn,
+    .btnred {
         text-align: center;
         width: 100%;
     }
 
-    section, .about, .contact, .testimonials, .features{
+    section,
+    .about,
+    .contact,
+    .testimonials,
+    .features {
         padding: 60px 20px !important;
     }
 
-    .about-content .h2, .contact-info .h2, .section-title .h2, .services .h2{
+    .about-content .h2,
+    .contact-info .h2,
+    .section-title .h2,
+    .services .h2 {
         font-size: 32px;
     }
 
-    .service-card img{
+    .service-card img {
         height: 200px;
     }
 
-    footer{
+    footer {
         padding: 40px 20px;
     }
 }
