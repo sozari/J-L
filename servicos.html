@@ -7,6 +7,7 @@
   <meta name="description"
     content="Serviços da J&L Mecânica Automotiva — freios, suspensão, troca de óleo e diagnóstico eletrônico." />
   <link rel="stylesheet" href="vendors/css/normalize.css" />
+  <link rel="stylesheet" href="resources/css/index.css" />
   <link rel="stylesheet" href="resources/css/headerFouter.css" />
   <link rel="stylesheet" href="resources/css/servicos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,23 +21,29 @@
 <body class="pg-servicos">
 
   <!-- NAV -->
-<nav class="main-nav">
-  <div>
-    <h1>J&L</h1>
-  </div>
-  <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="servicos.html" class="nav-ativo">Serviços</a></li>
-    <li><a href="index.html#about">Sobre Nós</a></li>
-    <li><a href="index.html#contact">Contato</a></li>
-  </ul>
-  <div class="nav-cta">
-    <a href="index.html#contact" class="btn">Whatsapp</a>
-  </div>
-</nav>
+  <nav class="main-nav">
+    <div>
+      <p class="h1">J&L</p>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#about">Sobre Nós</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+
+    <div class="nav-btn-container">
+      <a href="https://web.whatsapp.com/" class="btn">Whatsapp</a>
+    </div>
+  </nav>
+
 
   <!-- HERO -->
   <header class="svc-hero">
@@ -56,7 +63,8 @@
     <!-- FREIOS -->
     <article class="svc-card" id="freios">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/brakes.png" alt="Sistema de freios — disco ventilado com pinça esportiva" loading="lazy" />
+        <img src="resources/css/img/brakes.png" alt="Sistema de freios — disco ventilado com pinça esportiva"
+          loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">SAFETY &amp; PERFORMANCE</span>
@@ -90,7 +98,8 @@
     <!-- SUSPENSÃO -->
     <article class="svc-card svc-card--invertido" id="suspensao">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/suspension.png" alt="Amortecedor e mola de suspensão sendo instalados" loading="lazy" />
+        <img src="resources/css/img/suspension.png" alt="Amortecedor e mola de suspensão sendo instalados"
+          loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">STABILITY &amp; CONTROL</span>
@@ -158,7 +167,8 @@
     <!-- DIAGNÓSTICO ELETRÔNICO -->
     <article class="svc-card svc-card--invertido" id="diagnostico">
       <figure class="svc-img-wrap">
-        <img src="resources/css/img/system.png" alt="Diagnóstico eletrônico com scanner automotivo conectado ao veículo" loading="lazy" />
+        <img src="resources/css/img/system.png" alt="Diagnóstico eletrônico com scanner automotivo conectado ao veículo"
+          loading="lazy" />
       </figure>
       <div class="svc-conteudo">
         <span class="svc-tag">SYSTEM ANALYSIS</span>
@@ -201,64 +211,108 @@
   </section>
 
   <!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <div class="footer-col">
-      <h3>J&L</h3>
-      <p>Manutenção automotiva com qualidade, transparência e confiança.</p>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>J&L</h3>
+        <p>Manutenção automotiva com qualidade, transparência e confiança.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#freios">Freios</a></li>
+          <li><a href="#suspensao">Suspensão</a></li>
+          <li><a href="#oleo">Troca de Óleo</a></li>
+          <li><a href="#diagnostico">Diagnóstico</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+555199999999">📞 (51) 99999-9999</a></li>
+          <li><a href="mailto:contato@jlauto.com.br">✉️ contato@jlauto.com.br</a></li>
+          <li>📍 Porto Alegre — RS</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <ul class="social-links">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg class="icone-social" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icone-social" viewBox="0 0 24 24">
+                <path
+                  d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.24.64.41 1.37.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.24-1.37.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 015.44 2.53c.64-.24 1.37-.41 2.43-.46C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z" />
+              </svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/555199999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icone-social" viewBox="0 0 24 24">
+                <path
+                  d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.51-.08-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.56-.02-.2 0-.5.07-.77.36-.26.3-1 .98-1 2.4 0 1.4 1.03 2.77 1.17 2.96.15.2 2.03 3.1 4.92 4.35.69.3 1.22.47 1.64.6.69.22 1.32.19 1.81.11.55-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.13-.26-.2-.55-.35z" />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 1.9.53 3.68 1.44 5.2L2 22l4.94-1.4A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.44-4.4-1.2l-.32-.19-3.28.93.9-3.2-.2-.33A7.94 7.94 0 014 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z" />
+              </svg>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Serviços</h4>
-      <ul>
-        <li><a href="#freios">Freios</a></li>
-        <li><a href="#suspensao">Suspensão</a></li>
-        <li><a href="#oleo">Troca de Óleo</a></li>
-        <li><a href="#diagnostico">Diagnóstico</a></li>
-      </ul>
+    <div class="footer-bottom">
+      © 2025 J&L Manutenção Automotiva. Todos os direitos reservados.
     </div>
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <ul>
-        <li><a href="tel:+555199999999">📞 (51) 99999-9999</a></li>
-        <li><a href="mailto:contato@jlauto.com.br">✉️ contato@jlauto.com.br</a></li>
-        <li>📍 Porto Alegre — RS</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Redes Sociais</h4>
-      <ul class="social-links">
-        <li><a href="https://facebook.com" target="_blank" rel="noopener">📘 Facebook</a></li>
-        <li><a href="https://instagram.com" target="_blank" rel="noopener">📷 Instagram</a></li>
-        <li><a href="https://wa.me/555199999999" target="_blank" rel="noopener">💬 WhatsApp</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 J&L Manutenção Automotiva. Todos os direitos reservados.
-  </div>
-</footer>
-<!-- JS — Menu hamburguer -->
-<script>
-  (function () {
-    var btn = document.getElementById('hamburger');
-    var nav = document.getElementById('nav-links');
-    if (!btn || !nav) return;
+  </footer>
 
-    btn.addEventListener('click', function () {
-      var aberto = nav.classList.toggle('aberto');
-      btn.classList.toggle('aberto', aberto);
-      btn.setAttribute('aria-expanded', aberto);
+  </script><!-- Script principal do SwiperJS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script de Configuração Modificado -->
+  <script>
+    const swiper = new Swiper('.features', {
+      loop: true,
+      spaceBetween: 40,      // Espaço entre as caixas
+      speed: 1000,           // Tempo da animação de deslizar (1 segundo de transição suave)
+      autoplay: {
+        delay: 4000,       // Fica parado mostrando os 2 cards por 4 segundos antes de mudar
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1 },  // No celular: mostra 1 card por vez
+        768: { slidesPerView: 2 },  // No tablet: mostra 2 cards por vez
+        1024: { slidesPerView: 2 } // No computador: Fica fixo mostrando 2 cards por vez!
+      }
     });
 
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('aberto');
-        btn.classList.remove('aberto');
-        btn.setAttribute('aria-expanded', 'false');
+    // Script do Menu Hamburguer original
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navBtn = document.querySelector('.nav-btn-container');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      navBtn.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        navBtn.classList.remove('active');
       });
     });
-  }());
-</script>
+  </script>
 
 </body>
 
