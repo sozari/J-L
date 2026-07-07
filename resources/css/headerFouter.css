@@ -93,7 +93,7 @@ footer {
     gap: 40px;
 }
 
-.footer-content > div {
+.footer-content > * {
     min-width: 0;
 }
 

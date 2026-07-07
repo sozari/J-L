@@ -117,7 +117,9 @@
 
                 <article class="service-card">
 
-                    <img class="imgService" src="resources/css/img/brakes.png" alt="Freios">
+                    <figure class="service-media">
+                        <img class="imgService" src="resources/css/img/brakes.png" alt="Freios" loading="lazy">
+                    </figure>
 
                     <div class="service-content">
                         <span>SAFETY & PERFORMANCE</span>
@@ -129,7 +131,9 @@
 
                 <article class="service-card">
 
-                    <img class="imgService" src="resources/css/img/suspension.png" alt="Suspensão">
+                    <figure class="service-media">
+                        <img class="imgService" src="resources/css/img/suspension.png" alt="Suspensão" loading="lazy">
+                    </figure>
 
                     <div class="service-content">
                         <span>STABILITY & CONTROL</span>
@@ -141,7 +145,9 @@
 
                 <article class="service-card">
 
-                    <img class="imgService" src="resources/css/img/system.png" alt="Diagnóstico">
+                    <figure class="service-media">
+                        <img class="imgService" src="resources/css/img/system.png" alt="Diagnóstico" loading="lazy">
+                    </figure>
 
                     <div class="service-content">
                         <span>SYSTEM ANALYSIS</span>
@@ -157,37 +163,41 @@
 
         <section id="about" class="about">
 
-            <div class="about-img">
-                <img src="resources/css/img/mecanic.png" alt="Oficina J&L">
-            </div>
+            <article class="about-article">
 
-            <div class="about-content">
+                <figure class="about-img">
+                    <img src="resources/css/img/mecanic.png" alt="Oficina J&L" loading="lazy">
+                </figure>
 
-                <p class="section-subtitle">
-                    SOBRE NÓS
-                </p>
+                <div class="about-content">
 
-                <p class="h2">
-                    Confiança e Qualidade em Cada Serviço
-                </p>
+                    <p class="section-subtitle">
+                        SOBRE NÓS
+                    </p>
 
-                <p>
-                    Na J&L Manutenção Automotiva, tratamos cada veículo com atenção aos detalhes e compromisso com a
-                    qualidade. Nossa equipe trabalha com equipamentos modernos e processos que garantem segurança e
-                    confiança para nossos clientes.
-                </p>
+                    <p class="h2">
+                        Confiança e Qualidade em Cada Serviço
+                    </p>
 
-                <p>
-                    Buscamos oferecer um atendimento transparente e serviços executados com excelência, desde revisões
-                    preventivas até diagnósticos avançados.
-                </p>
+                    <p>
+                        Na J&L Manutenção Automotiva, tratamos cada veículo com atenção aos detalhes e compromisso com a
+                        qualidade. Nossa equipe trabalha com equipamentos modernos e processos que garantem segurança e
+                        confiança para nossos clientes.
+                    </p>
 
-                <div class="about-years">
-                    <p class="h3">15+</p>
-                    <p>ANOS DE EXPERIÊNCIA</p>
+                    <p>
+                        Buscamos oferecer um atendimento transparente e serviços executados com excelência, desde revisões
+                        preventivas até diagnósticos avançados.
+                    </p>
+
+                    <div class="about-years">
+                        <p class="h3">15+</p>
+                        <p>ANOS DE EXPERIÊNCIA</p>
+                    </div>
+
                 </div>
 
-            </div>
+            </article>
 
         </section>
 
@@ -202,10 +212,14 @@
 
                 <article class="testimonial-card"> 
 
-                    <h1>
+                    <figure class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de João Silva" loading="lazy">
+                    </figure>
+
+                    <blockquote class="testimonial-quote">
                         "Atendimento excelente, serviço rápido e transparente. Recomendo para qualquer pessoa que busca
                         confiança."
-                    </h1>
+                    </blockquote>
 
                     <p class="h4">João Silva</p>
 
@@ -215,9 +229,13 @@
 
                 <article class="testimonial-card">
 
-                    <p>
+                    <figure class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Maria Souza" loading="lazy">
+                    </figure>
+
+                    <blockquote class="testimonial-quote">
                         "Resolveram um problema que outras oficinas não conseguiram identificar. Serviço impecável."
-                    </p>
+                    </blockquote>
 
                     <p class="h4">Maria Souza</p>
 
@@ -269,7 +287,7 @@
 
     <footer>
 
-        <div class="footer-content">
+            <div class="footer-content">
 
             <div>
                 <p class="h3">J&L</p>
@@ -279,15 +297,16 @@
                 </p>
             </div>
 
-            <div>
-                <p class="h4">Serviços</p>
+                <nav aria-label="Navegação do rodapé">
+                    <p class="h4">Navegação</p>
 
-                <ul>
-                    <li>Freios</li>
-                    <li>Suspensão</li>
-                    <li>Diagnóstico</li>
-                </ul>
-            </div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
 
             <div>
                 <p class="h4">Contato</p>
