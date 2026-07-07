@@ -140,7 +140,9 @@ img {
 .btn-container {
     padding-top: 16px;
     display: flex;
+    /* display flex: define um layout flexível, ou seja, os elementos serão dispostos em uma linha ou coluna */
     gap: 16px;
+    /* gap: define o espaçamento entre os elementos */
 }
 
 /* Estilo base dos botões */
@@ -150,6 +152,7 @@ img {
     background-color: transparent;
     color: var(--cor-texto);
     padding: 12px 24px;
+    /* padding: define o espaçamento interno do botão */
     font-family: var(--fonte-titulo);
     transition: 0.3s;
 }
@@ -291,12 +294,16 @@ section {
 /* Efeito visual nas imagens */
 .imgService {
     filter: grayscale(100%);
+    /* deixo a imagem em tons de cinza por padrão */
     transition: filter 0.3s ease, transform 0.3s ease;
+    /* transition: define a transição suave para as propriedades filter e transform */
 }
 
 .service-card:hover .imgService {
     filter: none;
+    /* remove os tons de cinza e volta pra cor normal */
     transform: scale(1.08);
+    /* aumenta a imagem em 8% */
 }
 
 /*****************************/
@@ -311,6 +318,7 @@ section {
 /* Organização da imagem e do conteúdo */
 .about-article {
     display: flex;
+    /* display flex: define um layout flexível, ou seja, os elementos serão dispostos em uma linha ou coluna */
     align-items: center;
     gap: 60px;
 }
@@ -318,11 +326,13 @@ section {
 /* Bloco da imagem da empresa */
 .about-img {
     flex: 1;
+    /* flex: define a propriedade flexível do elemento, neste caso 1, irá ocupar o espaço disponível */
 }
 
 .about-img img {
     width: 100%;
     display: block;
+    /* display: define o tipo de exibição do elemento, block irá exibir o elemento como um bloco */
 }
 
 /* Bloco textual da seção Sobre */
@@ -362,6 +372,7 @@ section {
     color: white;
     font-size: 10px;
     margin: 0;
+    /* margin: define o espaçamento ao redor do elemento, 0 faz com que não haja espaçamento */
 }
 
 /*****************************/
@@ -375,6 +386,8 @@ section {
 /* Grade dos depoimentos */
 .testimonials-grid {
     display: flex;
+    /* display: define o tipo de exibição do elemento */
+    /* display flex: define um layout flexível, ou seja, os elementos serão dispostos em uma linha ou coluna */
     gap: 30px;
 }
 
@@ -383,6 +396,7 @@ section {
     background-color: var(--cor-card);
     padding: 35px;
     flex: 1;
+    /* flex: define a propriedade flexível do elemento, neste caso 1, irá ocupar o espaço disponível */
 }
 
 /* Foto do cliente */
@@ -390,7 +404,9 @@ section {
     width: 84px;
     height: 84px;
     border-radius: 50%;
+    /* border-radius: define o raio da borda, criando um círculo */
     overflow: hidden;
+    /* overflow: define como o conteúdo que excede o contêiner deve ser tratado, neste caso será ocultado */
     border: 2px solid var(--cor-vermelha);
     margin-bottom: 18px;
 }
@@ -398,8 +414,11 @@ section {
 /* Ajuste da foto dentro do círculo */
 .testimonial-avatar img {
     width: 100%;
+    /* width: define a largura da imagem */
     height: 100%;
+    /* height: define a altura da imagem */
     object-fit: cover;
+    /* object-fit: define como a imagem deve se ajustar dentro do contêiner */
 }
 
 /* Texto principal do depoimento */
@@ -411,14 +430,17 @@ section {
 }
 
 .testimonial-card p {
-    line-height: 1.8;
+    line-height: 1.8; 
+    /* line-height: define a altura da linha */
     color: var(--cor-texto-secundario);
     margin-bottom: 20px;
+    /* margin-bottom: define o espaçamento inferior */
 }
 
 .testimonial-card .h4 {
     margin-bottom: 5px;
     font-size: 18px;
+    /* font-size: define o tamanho da fonte */
     font-weight: 600;
 }
 
