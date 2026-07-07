@@ -2,14 +2,14 @@
 /****** CONFIGURAÇÕES ********/
 /*****************************/
 
-/* Reset */
+/* Reset básico do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configurações gerais */
+/* Configurações globais da página */
 html {
     background-color: #615959;
     color: #E5E2E1;
@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Estilos de Texto Convertidos de tags <h> para Classes */
+/* Classes usadas como títulos no lugar de h1-h6 */
 .h1,
 .h2,
 .h3,
@@ -32,7 +32,7 @@ html {
     color: #E5E2E1;
 }
 
-/* Corpo */
+/* Estilo base do corpo da página */
 body {
     background-color: #0A0A0A;
     color: #E5E2E1;
@@ -40,18 +40,18 @@ body {
     width: 100%;
 }
 
-/* Links */
+/* Configuração padrão dos links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Listas */
+/* Remove marcadores das listas */
 ul {
     list-style: none;
 }
 
-/* Imagens */
+/* Ajuste padrão das imagens */
 img {
     max-width: 100%;
     display: block;
@@ -60,6 +60,7 @@ img {
 /*****************************/
 /******** VARIÁVEIS **********/
 /*****************************/
+/* Variáveis globais de cores, fontes e espaçamentos */
 :root {
     --cor-fundo: #0A0A0A;
     --cor-card: #212121;
@@ -84,6 +85,7 @@ img {
 /*****************************/
 /******** HERO HEADER ********/
 /*****************************/
+/* Imagem principal com gradiente escuro */
 .imgheader {
     background-image:
         linear-gradient(to top,
@@ -97,10 +99,12 @@ img {
     background-position: center;
 }
 
+/* Área principal de apresentação */
 .hero {
     padding: 280px 125px;
 }
 
+/* Texto superior em destaque */
 .subtitulo {
     color: var(--cor-vermelha);
     font-family: var(--fonte-label);
@@ -110,6 +114,7 @@ img {
     font-weight: 700;
 }
 
+/* Título principal do site */
 .hero .h1,
 .hero .h1-raw {
     font-size: 80px;
@@ -118,23 +123,27 @@ img {
     margin: 0;
 }
 
+/* Destaque em vermelho no título */
 .hero .h1 span {
     color: var(--cor-vermelha);
     text-shadow: 0 0 10px rgba(227, 6, 21, 0.623);
 }
 
+/* Texto descritivo do hero */
 .descricao {
     color: var(--cor-texto-secundario);
     margin-bottom: 24px;
     line-height: 1.5;
 }
 
+/* Agrupa os botões de ação */
 .btn-container {
     padding-top: 16px;
     display: flex;
     gap: 16px;
 }
 
+/* Estilo base dos botões */
 .btn,
 .btnred {
     display: inline-block;
@@ -167,10 +176,12 @@ img {
 /*****************************/
 /******** SEÇÕES **************/
 /*****************************/
+/* Espaçamento padrão das seções */
 section {
     padding: 80px 125px;
 }
 
+/* Títulos reutilizados nas seções */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -198,6 +209,7 @@ section {
 /*****************************/
 /******** FEATURES ***********/
 /*****************************/
+/* Cards de diferenciais da oficina */
 .features {
     display: block;
     padding: 80px 125px;
@@ -206,6 +218,7 @@ section {
     overflow: hidden;
 }
 
+/* Card individual */
 .feature-card {
     background-color: var(--cor-card);
     padding: 30px;
@@ -232,29 +245,34 @@ section {
 /*****************************/
 /******** SERVIÇOS ***********/
 /*****************************/
+/* Grid dos serviços oferecidos */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
+/* Card de serviço */
 .service-card {
     background-color: var(--cor-card);
     overflow: hidden;
 }
 
+/* Remove a margem padrão das figuras */
 .service-media,
 .about-img,
 .testimonial-avatar {
     margin: 0;
 }
 
+/* Imagem dos serviços */
 .service-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
+/* Conteúdo interno do card */
 .service-content {
     padding: 25px;
 }
@@ -270,6 +288,7 @@ section {
     margin-bottom: 20px;
 }
 
+/* Efeito visual nas imagens */
 .imgService {
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -283,17 +302,20 @@ section {
 /*****************************/
 /******** SOBRE **************/
 /*****************************/
+/* Seção institucional da empresa */
 .about {
     padding: 100px 125px;
     background-color: var(--cor-card);
 }
 
+/* Organização da imagem e do conteúdo */
 .about-article {
     display: flex;
     align-items: center;
     gap: 60px;
 }
 
+/* Bloco da imagem da empresa */
 .about-img {
     flex: 1;
 }
@@ -303,6 +325,7 @@ section {
     display: block;
 }
 
+/* Bloco textual da seção Sobre */
 .about-content {
     flex: 1;
 }
@@ -319,6 +342,7 @@ section {
     margin-bottom: 20px;
 }
 
+/* Destaque dos anos de experiência */
 .about-years {
     background-color: var(--cor-vermelha);
     width: 120px;
@@ -343,21 +367,25 @@ section {
 /*****************************/
 /******* DEPOIMENTOS *********/
 /*****************************/
+/* Área de avaliações dos clientes */
 .testimonials {
     padding: 100px 125px;
 }
 
+/* Grade dos depoimentos */
 .testimonials-grid {
     display: flex;
     gap: 30px;
 }
 
+/* Card de depoimento */
 .testimonial-card {
     background-color: var(--cor-card);
     padding: 35px;
     flex: 1;
 }
 
+/* Foto do cliente */
 .testimonial-avatar {
     width: 84px;
     height: 84px;
@@ -367,12 +395,14 @@ section {
     margin-bottom: 18px;
 }
 
+/* Ajuste da foto dentro do círculo */
 .testimonial-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Texto principal do depoimento */
 .testimonial-quote {
     line-height: 1.8;
     font-size: 14px;
@@ -400,12 +430,14 @@ section {
 /*****************************/
 /******** CONTATO ************/
 /*****************************/
+/* Informações e localização */
 .contact {
     display: flex;
     gap: 50px;
     padding: 100px 125px;
 }
 
+/* Bloco de informações */
 .contact-info {
     flex: 1;
 }
@@ -424,10 +456,12 @@ section {
     margin-bottom: 15px;
 }
 
+/* Área do mapa */
 .contact-map {
     flex: 1;
 }
 
+/* Mapa ocupando toda a largura disponível */
 .mapa-responsivo iframe {
     width: 100% !important;
     max-width: 100%;
@@ -439,7 +473,9 @@ section {
 /*****************************/
 /******** RESPONSIVO *********/
 /*****************************/
+/* Ajustes para notebooks e telas médias */
 @media (max-width: 1200px) {
+    /* Layout mobile do menu */
     .main-nav {
         padding: 12px 80px;
     }
@@ -453,13 +489,16 @@ section {
         padding-right: 80px;
     }
 
+    /* Cards e colunas em duas colunas */
     .services-grid,
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Ajustes para tablets */
 @media (max-width: 900px) {
+    /* Menu em coluna no tablet */
     .main-nav {
         padding: 20px 40px !important;
         flex-direction: row !important;
@@ -502,6 +541,7 @@ section {
         display: block !important;
     }
 
+    /* Hero com menos espaço */
     .hero {
         padding: 180px 40px;
     }
@@ -511,6 +551,7 @@ section {
         font-size: 56px;
     }
 
+    /* Seções empilhadas em telas menores */
     .services-grid,
     .about-article,
     .contact,
@@ -525,14 +566,15 @@ section {
     }
 }
 
+/* Ajustes para celulares */
 @media (max-width: 600px) {
     .main-nav {
         padding: 20px !important;
     }
 
+    /* Hero mais compacto no celular */
     .hero {
         padding: 140px 20px 60px 20px !important;
-        /* Corrigido conflito de paddings que quebravam a tela */
     }
 
     .hero .h1,
