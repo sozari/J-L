@@ -253,13 +253,6 @@ section {
     padding: 25px;
 }
 
-.service-category {
-    color: var(--cor-vermelha);
-    font-family: var(--fonte-label);
-    font-size: 10px;
-    text-transform: uppercase;
-}
-
 .service-content .h3 {
     margin: 10px 0 15px;
     font-size: 20px;
@@ -269,12 +262,6 @@ section {
 .service-content p {
     color: var(--cor-texto-secundario);
     margin-bottom: 20px;
-}
-
-.service-link {
-    color: var(--cor-vermelha);
-    font-family: var(--fonte-label);
-    font-size: 11px;
 }
 
 .imgService {
